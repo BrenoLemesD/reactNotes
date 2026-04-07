@@ -41,6 +41,7 @@
   color: #888;
 }
 
- p{
-  color: blue;
+p {
+  color: rgb(238, 238, 238);
+  font-size: 1.25rem;
 }
