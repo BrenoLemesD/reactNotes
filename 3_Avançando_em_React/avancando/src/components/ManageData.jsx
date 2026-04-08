@@ -12,7 +12,6 @@ const ManageData = () => {
         {/* errado, devemos usar o setNome (no caso setNumber) para setar valor */}
         <p>Errado / Certo</p>
         <button onClick={() => (someData = 15)}>Mudar com variavel</button>
-
         <button onClick={() => setNumber(32)}>Mudar com set</button>
       </div>
       <div>
