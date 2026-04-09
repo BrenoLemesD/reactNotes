@@ -1,10 +1,16 @@
+import { useState } from "react";
 import "./App.css";
 import City from "./assets/city.jpg";
 import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 import ConditionalRender from "./components/ConditionalRender";
+import ShowUserName from "./components/ShowUserName";
+import CarDetails from "./components/CarDetails";
 
 function App() {
+  const name = "Breno";
+  const [UserName] = useState("Breno");
+
   return (
     <div className="App">
       <h1>Avançando em React</h1>
@@ -19,6 +25,10 @@ function App() {
       <ManageData />
       <ListRender />
       <ConditionalRender />
+      {/* props */}
+      <ShowUserName name={UserName} />
+      {/* destructuring */}
+      <CarDetails brand="VW" km={10000} color="black" />
     </div>
   );
 }
