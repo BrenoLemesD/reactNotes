@@ -1,28 +1,30 @@
-import { useState } from "react"
+import { useState } from "react";
 
 const ConditionalRender = () => {
-    const [x] = useState(true)
+  const [x] = useState(true);
 
-    const [name, setName] = useState('jao')
-  
-    return (
+  const [name, setName] = useState("Pedro");
+
+  return (
     <div>
-        <h1>Isso será escrito?</h1>
-        {x && <p>Se x for true, Sim!</p>}
-        {!x && <p>Agora é falso!</p>}
-        <h1>IF TERNÁRIO</h1>
-    {name === "Breno" ? (
-        <div>
-            <p>Nome é Breno</p>
-        </div>
-    ) : (
-        <div>
-            <p>Nome não é Breno</p>
-        </div>
-    )}
-    <button onClick={() => setName('Breno')}>Clica aqui</button>
-    </div>
-  )
-}
+      <h1>isso será exibido?</h1>
+      {x && <p>Se x for true, sim!</p>}
+      {!x && <p>Agora x é falso</p>}
 
-export default ConditionalRender
+      <h1>If ternario</h1>
+
+      {name === "João" ? (
+        <div>
+          <p>O nome é João</p>
+        </div>
+      ) : (
+        <div>
+          <p>O nome não é João</p>
+        </div>
+      )}
+      <button onClick={() => setName("João")}>Setar Joao</button>
+    </div>
+  );
+};
+
+export default ConditionalRender;
