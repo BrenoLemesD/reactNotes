@@ -1,9 +1,9 @@
-const ExecuteFunction = ({MyFunction}) => {
+const ExecuteFunction = ({ myFunction }) => {
   return (
     <div>
-        <button onClick={MyFunction}>Clique aqui para executar a função</button>
+      <button onClick={myFunction}>Clique aqui para executar a function</button>
     </div>
-  )
-}
+  );
+};
 
-export default ExecuteFunction
+export default ExecuteFunction;

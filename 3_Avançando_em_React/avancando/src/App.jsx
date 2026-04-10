@@ -8,6 +8,7 @@ import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
 import Fragment from "./components/Fragment";
 import Container from "./components/Container";
+import ExecuteFunction from "./components/ExecuteFunction";
 
 function App() {
   // const name = "Breno";
@@ -18,6 +19,10 @@ function App() {
     { id: 2, brand: "Ford", km: 0, color: "white", newCar: true },
     { id: 3, brand: "Fiat", km: 10, color: "red", newCar: false },
   ];
+
+  function showMessage() {
+    console.log("Evento do componente Pai");
+  }
 
   return (
     <div className="App">
@@ -36,14 +41,33 @@ function App() {
       {/* props */}
       <ShowUserName name={UserName} />
       {/* destructuring */}
-      <CarDetails brand="VW" km={10000} color="black" newCar={false} />
+      <CarDetails
+        key={cars.id}
+        brand="VW"
+        km={10000}
+        color="black"
+        newCar={false}
+      />
       {/* reaproveitando componentes */}
-      <CarDetails brand="Ford" km={0} color="white" newCar={true} />
-      <CarDetails brand="Ford" km={10} color="black" newCar={false} />
+      <CarDetails
+        key={cars.id}
+        brand="Ford"
+        km={0}
+        color="white"
+        newCar={true}
+      />
+      <CarDetails
+        key={cars.id}
+        brand="Ford"
+        km={10}
+        color="black"
+        newCar={false}
+      />
       {/* loop em array de objetos */}
       <p>MAP AQ -------------</p>
       {cars.map((cars) => (
         <CarDetails
+          key={cars.id}
           brand={cars.brand}
           color={cars.color}
           km={cars.km}
@@ -59,6 +83,8 @@ function App() {
       <Container myValue="testing 2">
         <h5>testando container </h5>
       </Container>
+      {/* executar função em props */}
+      <ExecuteFunction myFunction={showMessage} />
     </div>
   );
 }
