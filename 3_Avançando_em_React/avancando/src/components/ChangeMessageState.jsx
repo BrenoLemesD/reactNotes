@@ -1,6 +1,5 @@
 const ChangeMessageState = ({ handleMessage }) => {
-  const messages = ["Oi", "Olá", "oi, Tudo bem?"];
-
+  const messages = ["oi", "olá", "oi td bem?"];
   return (
     <div>
       <button onClick={() => handleMessage(messages[0])}>1</button>
