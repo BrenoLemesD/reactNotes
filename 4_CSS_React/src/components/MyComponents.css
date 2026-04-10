@@ -1,10 +1,9 @@
 p {
-    color: green;
-    background-color: white;
+  color: green;
+  background-color: black;
 }
 
-.my-comp-paragrafy {
-    color: blue;
-    background-color: red;
-
+.my-com-paragraph {
+  color: black;
+  background-color: gold;
 }
