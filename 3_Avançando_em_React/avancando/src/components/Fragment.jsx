@@ -1,13 +1,12 @@
-import React from 'react'
-
-const Fragment = ({propFragment}) => {
+const Fragment = ({ propFragment }) => {
   return (
     <>
-        <h1>Primeiro Titulo</h1>
-        <h2>Segundo Titulo</h2>
-        <h3>{propFragment}</h3>
+      <h3>----------------------------</h3>
+      <h2>Primeiro título</h2>
+      <h3>Segundo título</h3>
+      <h4>{propFragment}</h4>
     </>
-  )
-}
+  );
+};
 
-export default Fragment 
+export default Fragment;

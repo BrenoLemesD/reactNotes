@@ -6,9 +6,11 @@ import ManageData from "./components/ManageData";
 import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
+import Fragment from "./components/Fragment";
+import Container from "./components/Container";
 
 function App() {
-  const name = "Breno";
+  // const name = "Breno";
   const [UserName] = useState("Breno");
 
   const cars = [
@@ -48,6 +50,15 @@ function App() {
           newCar={cars.newCar}
         />
       ))}
+      {/* fragment */}
+      <Fragment propFragment={"teste"} />
+      {/* children */}
+      <Container myValue="testing">
+        <p>Este é o conteúdo do container</p>
+      </Container>
+      <Container myValue="testing 2">
+        <h5>testando container </h5>
+      </Container>
     </div>
   );
 }
