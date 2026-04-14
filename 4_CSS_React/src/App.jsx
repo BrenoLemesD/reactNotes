@@ -6,6 +6,8 @@ export default function App() {
   const n = 15;
   const [name] = useState("Breno");
 
+  const redTitle = true;
+
   return (
     <div className="App">
       {/* CSS global */}
@@ -39,6 +41,10 @@ export default function App() {
         }
       >
         Css dinamico
+      </h2>
+      {/* Classe Dinamica */}
+      <h2 className={redTitle ? "red-title" : "title"}>
+        Este titulo vai ter classe dinamica
       </h2>
     </div>
   );
