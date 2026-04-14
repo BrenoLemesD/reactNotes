@@ -1,29 +1,20 @@
-import { useState } from 'react'
-import './App.css'
-import car from "./components/car"
-
-
-
 function App() {
-  const [count, setCount] = useState(0)
   const myCars = [
-    {name: "Fusca", km: "10000", color: "Branco"},
-    {name: "Polo", km: "32000", color: "Cinza"},
-    {name: "Onix", km: "0", color: "Preto"},
-  ]
+    { id: 1, brand: "Ford", model: "Mustang", year: 2020 },
+    { id: 2, brand: "Chevrolet", model: "Camaro", year: 2019 },
+    { id: 3, brand: "Dodge", model: "Challenger", year: 2021 },
+  ];
 
   return (
-    <>
-      <div>
-        <h1>Showroom de carros</h1>
-        <div className='car-container'>
-          {myCars.map((car) => (
-            <car car={car}/>
-          ))}
-        </div>
+    <div className="App">
+      <h1>Showroom de carros</h1>
+      <div className="car-container">
+        {myCars.map((car) => (
+          <Car car={car} />
+        ))}
       </div>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
