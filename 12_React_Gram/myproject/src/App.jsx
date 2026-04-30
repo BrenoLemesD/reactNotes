@@ -130,6 +130,85 @@ function App() {
               Ver Recursos
             </a>
           </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="mt-14 grid grid-cols-3 gap-4"
+          >
+            {["Velocidade", "Segurança", "Conversão"].map((label, i) => (
+              <div
+                key={label}
+                className="round-2xl border boder-white/10 bg-white/[0.02] p-6"
+              >
+                <div className="flex items-center gap-3">
+                  {i == 0 && <Zap className="size-5 text-esmerald-400" />}
+                  {i == 1 && <Shield className="size-5 text-sky-400" />}
+                  {i == 2 && <Star className="size-5 text-amber-400" />}
+                  <div className="font-semibold">{label}</div>
+                </div>
+                <p className="text-sm text-slate-400 mt-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+                  labore velit error consequatur impedit excepturi esse.
+                </p>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section id="features" className="mx-auto max-w-6xl px-4 py-16">
+        <h1 className="text-3xl font-bold">Tudo o que você precisa</h1>
+        <p className="text-slatew-300 mt-2 max-w-2xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+          non tempora optio soluta maxime perspiciatis quos quae animi ducimus
+          quod minus totam ad dolorum culpa fugiat laborum maiores odit
+          praesentium!
+        </p>
+        <div
+          className="mt-8  grid grid-cols-1 md-grid-colos-2
+         lg:grid-cols-3 gap-4"
+        >
+          {[
+            {
+              title: "Design Responsivo",
+              desc: "Funciona em qualquer tela",
+              icon: <Sparkles className="size-5 text-fuchsia-400" />,
+            },
+            {
+              title: "Design Responsivo",
+              desc: "Funciona em qualquer tela",
+              icon: <Sparkles className="size-5 text-fuchsia-400" />,
+            },
+            {
+              title: "Design Responsivo",
+              desc: "Funciona em qualquer tela",
+              icon: <Sparkles className="size-5 text-fuchsia-400" />,
+            },
+            {
+              title: "Design Responsivo",
+              desc: "Funciona em qualquer tela",
+              icon: <Sparkles className="size-5 text-fuchsia-400" />,
+            },
+            {
+              title: "Design Responsivo",
+              desc: "Funciona em qualquer tela",
+              icon: <Sparkles className="size-5 text-fuchsia-400" />,
+            },
+            {
+              title: "Design Responsivo",
+              desc: "Funciona em qualquer tela",
+              icon: <Sparkles className="size-5 text-fuchsia-400" />,
+            },
+          ].map((F) => (
+            <div
+              key={F.title}
+              className="rounded-2xl border border-white/10 bg-white/[0.02]"
+            >
+              teste
+            </div>
+          ))}
         </div>
       </section>
     </div>
