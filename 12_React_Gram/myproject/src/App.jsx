@@ -158,7 +158,7 @@ function App() {
       </section>
 
       {/* Features */}
-      <section id="features" className="mx-auto max-w-6xl px-4 py-16">
+      <section id="features" className="mx-auto max-w-6xl px-4 py-8">
         <h1 className="text-3xl font-bold">Tudo o que você precisa</h1>
         <p className="text-slatew-300 mt-2 max-w-2xl">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
@@ -166,15 +166,22 @@ function App() {
           quod minus totam ad dolorum culpa fugiat laborum maiores odit
           praesentium!
         </p>
-        <div
-          className="mt-8  grid grid-cols-1 md-grid-colos-2
-         lg:grid-cols-3 gap-4"
-        >
+        <div className="mt-8 grid grid-cols-1 md-grid-cols-2 lg:grid-cols-3 gap-4">
           {[
             {
               title: "Design Responsivo",
               desc: "Funciona em qualquer tela",
-              icon: <Sparkles className="size-5 text-fuchsia-400" />,
+              icon: <Star className="size-5 text-amber-400" />,
+            },
+            {
+              title: "Design Responsivo",
+              desc: "Funciona em qualquer tela",
+              icon: <Zap className="size-5 text-esmerald-400" />,
+            },
+            {
+              title: "Design Responsivo",
+              desc: "Funciona em qualquer tela",
+              icon: <Shield className="size-5 text-sky-400" />,
             },
             {
               title: "Design Responsivo",
@@ -184,29 +191,23 @@ function App() {
             {
               title: "Design Responsivo",
               desc: "Funciona em qualquer tela",
-              icon: <Sparkles className="size-5 text-fuchsia-400" />,
+              icon: <Star className="size-5 text-amber-400" />,
             },
             {
               title: "Design Responsivo",
               desc: "Funciona em qualquer tela",
-              icon: <Sparkles className="size-5 text-fuchsia-400" />,
+              icon: <Zap className="size-5 text-esmerald-400" />,
             },
-            {
-              title: "Design Responsivo",
-              desc: "Funciona em qualquer tela",
-              icon: <Sparkles className="size-5 text-fuchsia-400" />,
-            },
-            {
-              title: "Design Responsivo",
-              desc: "Funciona em qualquer tela",
-              icon: <Sparkles className="size-5 text-fuchsia-400" />,
-            },
-          ].map((F) => (
+          ].map((f) => (
             <div
-              key={F.title}
+              key={f.title}
               className="rounded-2xl border border-white/10 bg-white/[0.02]"
             >
-              teste
+              <div className="flex items-center gap-3">
+                {f.icon}
+                <p className="font-semibold">{f.title}</p>
+                <p className="text-sm text-slate-400 mt-2">{f.desc}</p>
+              </div>
             </div>
           ))}
         </div>
